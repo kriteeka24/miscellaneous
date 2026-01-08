@@ -1,30 +1,30 @@
-def number_inputs():
-    a=float(input("Enter first number: "))
-    b=float (input ("Enter second number: "))
-    return a,b
+def get_numbers():
+    a = float(input("Enter first number: "))
+    b = float(input("Enter second number: "))
+    return a, b
 
 
-def add_numbers(a,b):
-    return a+b
-
-def multiply_numbers(a,b):
-    return a*b
-
-def divide_numbers(a,b):
-    return float(a/b)
-
-def subtract_numbers(a,b):
-    return a-b
+def add(a, b):
+    return a + b
 
 
-x,y=number_inputs()
+def subtract(a, b):
+    return a - b
 
-sum = add_numbers(x,y)
-difference=subtract_numbers(x,y)
-product=multiply_numbers(x,y)
-division=divide_numbers(x,y)
-print("Sum =", sum)
-print("Difference=",difference)
-print("Product=",product)
-print("Division=",division)
 
+def multiply(a, b):
+    return a * b
+
+
+def divide(a, b):
+    if b == 0:
+        return "Undefined (division by zero)"
+    return a / b
+
+
+x, y = get_numbers()
+
+print(f"Sum         = {add(x, y)}")
+print(f"Difference  = {subtract(x, y)}")
+print(f"Product     = {multiply(x, y)}")
+print(f"Division    = {divide(x, y)}")
